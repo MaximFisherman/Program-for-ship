@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	#mydiv {
+		width: 100%;
+	}
+	img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+</style>
+</head>
+<body>
+<div id="mydiv">
+    <div style="position:absolute;top:140px;left:0;width:1000px;height:210px;">
+        <div id="cover" style="display:none;">
+            <!-- cover layer -->
+            <img style="left:11px;top:123px;" src="img/r_1.gif">
+            <img style="left:118px;top:46px;" src="img/r_2.gif">
+            <img style="left:114px;top:96px;" src="img/r_3.gif">
+            <img style="left:220px;top:66px;" src="img/r_4.gif">
+            <img style="left:527px;top:3px;" src="img/r_5.gif">
+            <img style="left:82px;top:85px;" src="img/r_6.gif">
+            <img style="left:329px;top:34px;" src="img/r_7.gif">
+
+        </div>
+        <img style="position:absolute;left:0px;top:0px;z-index:10;width:1000px;height:210px"
+             src="img/x1x1.gif" usemap="#Map">
+        <img id='flag' style="display:none;position:absolute;left:0px;top:0px;" src="img/Flag04.gif">
+    </div>
+    ...
+    <map name="Map" id="Map">
+        <area shape="poly" coords="341,161,385,133,436,132,464,121,458,95,453,69,518,61,524,124,557,149,
+579,167,627,156,660,176,620,190,504,199,396,189" href="#7" />
+        <area shape="poly" coords="545,69,627,58,738,15,861,88,757,105,854,137,862,185,745,154,691,169,635,132,588,145,548,109" href="#5" />
+        <area shape="poly" coords="225,155,287,122,354,87,425,72,431,109,380,114,361,130,323,154" href="#4" />
+        <area shape="poly" coords="148,69,211,98,289,109,343,80,382,50,308,67,254,66,249,46" href="#2" />
+        <area shape="poly" coords="257,122,186,120,109,143,173,157,206,160" href="#3" />
+        <area shape="poly" coords="125,82,207,106,91,122" href="#6" />
+        <area shape="poly" coords="15,152,29,134,92,129,102,147,38,184" href="#1" />
+    </map>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript" src="jquery.maphilight.resize.min.js"></script>
+
+
+
+<script>
+jQuery(function() {
+		jQuery('img[usemap]').rwdImageMaps();
+
+        jQuery('.map').maphilight();
+        jQuery(window).resize(function() {
+      		jQuery('.map').maphilight();
+   		});
+});
+</script>
+
+</body>
+</html>

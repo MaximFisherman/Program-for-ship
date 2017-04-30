@@ -7,9 +7,68 @@ class Ship extends Base
         mysqli_query($this->dlink, "INSERT INTO `Ships`(`name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship) VALUES ('".$name_ship."','".$type_ship."','".$build_year_ship."','".$height."','".$length."','".$width."','".$snar_cargo."','".$max_cargo."','".$max_draft."','".$flag."','".$name_file_photo."')");
         echo("<script>document.location.replace('../pages/Start_page.php');</script>");
         }
+
     function delete_ship($name_ship){
         mysqli_query($this->dlink, "DELETE FROM `Ships` WHERE name like '%".$name_ship."%'");
     }
+
+    function delete_record_to_table_ship($id){
+        mysqli_query($this->dlink, "DELETE FROM `Ship_Resource` WHERE id= ".$id." ");
+    }
+
+    function Add_resource($date_resource,$element_resource,$hour_guarantee){
+        mysqli_query($this->dlink,"INSERT INTO `Ship_Resource`(`name_ship`, `date_resource`, `element`, `hour_guarantee`) VALUES ('".$_SESSION['Name_ship']."','".$date_resource."','".$element_resource."','".$hour_guarantee."')");
+    }
+
+    function View_resource_ship_to_table(){
+        $result =  mysqli_query($this->dlink, "SELECT id,`name_ship`, `date_resource`, `element`, `hour_guarantee` FROM `Ship_Resource`");
+        while($arr = mysqli_fetch_array($result)) {
+            echo("
+        <tr class=\"odd gradeX\">
+                                            <td>" . $arr['date_resource'] . "</td>
+                                            <td>".$arr['element']."</td>
+                                            <td>".$arr['hour_guarantee']."</td>
+                                            <td class=\"center\"><button onclick='Delete_record_resource(this);' id='".$arr['id']."' class=\"btn btn-danger btn-xs\"  ><span class=\"glyphicon glyphicon-trash\"></span></button></td>
+        </tr>
+        ");
+        }
+
+        echo("<script>$('#Resource_of_exploitation').html($str);</script>");
+    }
+
+    function View_ship_characteristics($nameship){
+        $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship FROM `Ships` ");
+        while($arr = mysqli_fetch_array($result)) {
+            echo("
+            <script>
+            $(\".name_ship\").text(\"".$arr['name']."\");
+            $(\".length_ship\").text(\"".$arr['length']."\");
+            $(\".width_ship\").text(\"".$arr['width']."\");
+            $(\".height_ship\").text(\"".$arr['height']."\");
+            $(\".max_draft_ship\").text(\"".$arr['max_draft']."\");
+            $(\".type_ship\").text(\"".$arr['type']."\");
+            $(\".curb_weight_ship\").text(\"".$arr['curb_weight']."\");
+            $(\".year_build_ship\").text(\"".$arr['build_year']."\");
+            $(\".max_cargo_ship\").text(\"".$arr['max_cargo']."\");
+            $(\".flag_ship\").text(\"".$arr['flag']."\");//Если добавим флаг 
+            
+            //Фото корабля
+            $('.photo_ship').attr('src', '".$arr['photo_ship']."');
+
+            </script>
+            ");
+            /*
+            echo("<td>" . $arr['name'] . "</td>");
+            echo("<td>" . $arr['type'] . "</td>");
+            echo("<td>" . $arr['build_year'] . "</td>");
+            echo("<td>" . $arr['height'] . "</td>");
+            echo("<td>" . $arr['length'] . "</td>");
+            echo("<td>" . $arr['width'] . "</td>");
+            echo("<td>" . $arr['flag'] . "</td>");*/
+        }
+        }
+
+
     function View_table_ship(){
        $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag` FROM `Ships` ");
 
@@ -48,7 +107,7 @@ class Ship extends Base
         echo("<td>".$arr['length']."</td>");
         echo("<td>".$arr['width']."</td>");
         echo("<td>".$arr['flag']."</td>");
-     echo("<td><a class=\"btn btn-primary btn-xs\" href='index.html'>Открыть</a></td>
+     echo("<td><a class=\"btn btn-primary btn-xs\" href='index.php?name_ship=".$arr['name']."'>Открыть</a></td>
     <td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><button onclick='Delete_ship(this);' id='".$arr['name']."' class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete\" ><span class=\"glyphicon glyphicon-trash\"></span></a></p></td>
     ");
 

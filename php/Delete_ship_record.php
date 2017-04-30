@@ -12,7 +12,8 @@ if(isset($_POST['id_ship']))
 
 if(isset($_GET['delete_ship'])) {
     $ship_class->delete_ship($_SESSION['id_ship']);
-   echo("<script>document.location.replace('../pages/Start_page.php');</script>");
     unset($_SESSION['id_ship']);
+   echo("<script>document.location.replace('../pages/Start_page.php');</script>");
+
 }
 ?>

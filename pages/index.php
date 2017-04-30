@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" id="Id_ship_name" href="index.html">CCB-175</a>
+                <a class="navbar-brand name_ship" id="Id_ship_name" href="index.html">CCB-175</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -68,16 +68,19 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Технические данные судна</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>Технические данные судна</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Состояние судна<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Контроль за коррозией</a>
+                                    <a href="Corrosion_control.php">Контроль за коррозией</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Контроль нароста на корпусе</a>
+                                    <a href="Scaffolding_on_ship.php">Контроль нароста на корпусе</a>
+                                </li>
+                                <li>
+                                    <a href="Resource_of_exploitation.php">Ресурс эксплуатации</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -118,7 +121,7 @@
                                             <img src="../Style/sea-ship-with-containers.png">
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge">15</div>
+                                            <div class="huge length_ship"></div>
                                             <div>Длина судна</div>
                                         </div>
                                     </div>
@@ -133,7 +136,7 @@
                                             <i class="fa fa-arrows-h fa-5x"></i>
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge">13</div>
+                                            <div class="huge width_ship"></div>
                                             <div>Ширина судна</div>
                                         </div>
                                     </div>
@@ -148,7 +151,7 @@
                                         <i class="fa fa-arrows-v fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
+                                        <div class="huge height_ship"></div>
                                         <div>Высота судна</div>
                                     </div>
                                 </div>
@@ -163,7 +166,7 @@
                                             <img src="../Style/Ship.png">
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge">124</div>
+                                            <div class="huge max_draft_ship"></div>
                                             <div>Осадка судна</div>
                                         </div>
                                     </div>
@@ -171,24 +174,8 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6">
-                            <div class="">
-                                <div class="">
-                                    <div class="row">
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="">
-                                <div class="">
-                                    <div class="row">
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="panel panel-danger">
                                 <div class="panel-heading">
@@ -197,22 +184,54 @@
                                             <img src="../Style/seventeen.png">
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge">1992</div>
+                                            <div class="huge year_build_ship"></div>
                                             <div>Год постройки</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-3 col-md-6">
-                            <div class="panel panel-yellow">
+                            <div class="panel  panel-warning">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <img src="../Style/carts.png">
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge curb_weight_ship"></div>
+                                            <div>Снаряженный вес</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <img src="../Style/weight.png">
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge max_cargo_ship"></div>
+                                            <div>Грузоподьемность</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
                                             <img src="../Style/browser.png">
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge">Военное судно</div>
+                                            <div class="huge type_ship"></div>
                                             <div>Тип судна</div>
                                         </div>
                                     </div>
@@ -220,22 +239,29 @@
                             </div>
                         </div>
 
-                        <img src="../Style/Ship/Ship_ccv-175.jpg" height="500" width="800">
                         <div class="col-lg-6 col-md-6">
                             <div class="panel panel-primary" align="justify" >
                                 <center>
                                 <div>
-                                    <h1>Name ship</h1>
+                                    <h1 class="name_ship"></h1>
                                 </div>
                                 </center>
                                 <div class="" style="margin: 10px;">
-                                    SADASDSDJFH JSDF ASDHFLJSFHS DHFD JDFVDKHJFG SDHJKF AHJDGFHJSDGFKASDHJ GFSDJHKFGJSDAH FGSDHFJGSDFHJAGS HKDF
-                                    SDF ;SAKDJFBKADFN ASDFAHFJKHASDLFJHASDKJFHDKJFHLDASJFHASJFJD SJHDSFH JKASHF KJDFH JLSDFSDKLASDHKF
-                                    SFL HSDJKFDHSAKDJFHLFASDGAKSHG
+                                    Описание корабля
                                 </div>
                             </div>
                         </div>
+
+                        <!-- image ship -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="" align="justify">
+                                <img src="../Style/Ship/Ship_ccv-175.jpg" class="photo_ship img-rounded" height="500" width="800">
+                            </div>
+                        </div>
+
                     </div>
+
+
 
                 </div>
                 <!-- /.col-lg-12 -->
@@ -267,5 +293,12 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
-
 </html>
+<?php
+include("../Clasess/Class_ship.php");
+$ship= new Ship();
+$ship->View_ship_characteristics($_GET['name_ship']);
+
+if (isset($_GET['name_ship']))
+$_SESSION['Name_ship']=$_GET['name_ship'];
+?>
