@@ -8,6 +8,10 @@ echo("Lifting capacity".$_POST["Lifting_capacity"]);
 echo("maximum draft".$_POST['maximum_draft']);
 echo("Flag_ship".$_POST['Flag_ship']);
 $ship_class = new Ship();
+$str_engine=null;
+for($i=1;$i<=$_POST['length_count_ship_engine_php'];$i++)
+$str_engine.= $_POST['Engine_number_'.$i.'']."|";
+echo("<br>".$str_engine);
 
 $uploaddir = '../File/Ship/';
 $uploadfile = $uploaddir . basename($_FILES['photo_new_ship']['name']);
@@ -20,5 +24,5 @@ if (move_uploaded_file($_FILES['photo_new_ship']['tmp_name'] , $uploadfile)) {
     echo "";
 }
 
-$ship_class->Add_ship($_POST['Name_ship'],$_POST['Type_ship'],$_POST['Year_start_ship'],$_POST['Height_ship'],$_POST['Length_ship'],$_POST['Width_ship'],$_POST['Curb_weight'],$_POST["Lifting_capacity"],$_POST['maximum_draft'],$_POST['Flag_ship'],$name_file);
+$ship_class->Add_ship($_POST['Name_ship'],$_POST['Type_ship'],$_POST['Year_start_ship'],$_POST['Height_ship'],$_POST['Length_ship'],$_POST['Width_ship'],$_POST['Curb_weight'],$_POST["Lifting_capacity"],$_POST['maximum_draft'],$_POST['Flag_ship'],$name_file,$_POST['Speed_ship'],$str_engine);
 ?>

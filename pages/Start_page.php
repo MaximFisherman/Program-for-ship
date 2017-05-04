@@ -152,6 +152,35 @@
                                 </div>
                             </div>
 
+                            <!-- Appended Input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Maximum draft">Средняя скорость корабля</label>
+                                <div class="col-md-5">
+                                    <div class="input-group">
+                                        <input id="id_flag_ship" name="Speed_ship" class="form-control" placeholder="В узлах" type="text" required="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="textinput">Количество двигателей</label>
+                                <div class="col-sm-10">
+                                    <input id="ship_engine_count" type="number" name="count_ship_engine" min="1" max="10" value=""  class="form-control"  required>
+                                    <input type='hidden' id='length_count_ship_engine' name="length_count_ship_engine_php">
+                                    <div id="div_engine_ship_count"></div>
+                                </div>
+                            </div>
+                            <script>
+                                $( "#ship_engine_count" ).change(function() {
+                                    var value = $(this).val();
+                                    $("#div_engine_ship_count").empty();
+                                    for(var i=1;i<=value;i++)
+                                        $('#div_engine_ship_count').append('Номер двигателя '+i+': <input type="text" class="form-control" placeholder="Мощность двигателя" name="Engine_number_'+i+'" required> <br> ');
+                                    $('#length_count_ship_engine').val(value);
+                                });
+                            </script>
+
                             <!-- Select Basic -->
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="departamento">Тип корабля</label>

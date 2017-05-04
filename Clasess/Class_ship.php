@@ -3,10 +3,16 @@ require_once("Class_base.php");
 class Ship extends Base
 {
     //Добавление корабля
-    function Add_ship($name_ship,$type_ship,$build_year_ship,$height,$length,$width,$snar_cargo,$max_cargo,$max_draft,$flag,$name_file_photo){
-        mysqli_query($this->dlink, "INSERT INTO `Ships`(`name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship) VALUES ('".$name_ship."','".$type_ship."','".$build_year_ship."','".$height."','".$length."','".$width."','".$snar_cargo."','".$max_cargo."','".$max_draft."','".$flag."','".$name_file_photo."')");
-        echo("<script>document.location.replace('../pages/Start_page.php');</script>");
+    function Add_ship($name_ship,$type_ship,$build_year_ship,$height,$length,$width,$snar_cargo,$max_cargo,$max_draft,$flag,$name_file_photo,$etalon_speed,$str_engine){
+        mysqli_query($this->dlink, "INSERT INTO `Ships`(`name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship, speed) VALUES ('".$name_ship."','".$type_ship."','".$build_year_ship."','".$height."','".$length."','".$width."','".$snar_cargo."','".$max_cargo."','".$max_draft."','".$flag."','".$name_file_photo."','".$etalon_speed."')");
+
+        $str =  explode("|",$str_engine);
+
+        for($i=0;$i<count($str);$i++) {
+            mysqli_query($this->dlink, " INSERT INTO `Engine_ship`(`name`, `power`) VALUES ('" . $name_ship . "','" . $str[$i] . "')");
         }
+        echo("<script>document.location.replace('../pages/Start_page.php');</script>");
+    }
 
     function delete_ship($name_ship){
         mysqli_query($this->dlink, "DELETE FROM `Ships` WHERE name like '%".$name_ship."%'");
@@ -21,7 +27,7 @@ class Ship extends Base
     }
 
     function View_resource_ship_to_table(){
-        $result =  mysqli_query($this->dlink, "SELECT id,`name_ship`, `date_resource`, `element`, `hour_guarantee` FROM `Ship_Resource`");
+        $result =  mysqli_query($this->dlink, "SELECT id,`name_ship`, `date_resource`, `element`, `hour_guarantee` FROM `Ship_Resource` where name_ship like '%".$_SESSION['Name_ship']."%'");
         while($arr = mysqli_fetch_array($result)) {
             echo("
         <tr class=\"odd gradeX\">
@@ -37,7 +43,7 @@ class Ship extends Base
     }
 
     function View_ship_characteristics($nameship){
-        $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship FROM `Ships` ");
+        $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship FROM `Ships` where name like '%".$nameship."%'");
         while($arr = mysqli_fetch_array($result)) {
             echo("
             <script>

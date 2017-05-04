@@ -1,3 +1,6 @@
+<?php
+include("../Clasess/Class_ship.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +36,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<style>
+    img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    }
+</style>
 </head>
 
 <body>
@@ -52,6 +61,11 @@
                 <a class="navbar-brand name_ship" id="Id_ship_name" href="index.html">CCB-175</a>
             </div>
             <!-- /.navbar-header -->
+            <div class="nav navbar-top-links navbar-right">
+                <form class="form-horizontal" action="../php/Exit_php.php" method="post" enctype="multipart/form-data" >
+                    <input type="submit" class="btn btn-warning" value="Выйти из меню корабля">
+                </form>
+            </div>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -71,13 +85,10 @@
                             <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>Технические данные судна</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Состояние судна<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Прогнозирование состояния судна<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="Corrosion_control.php">Контроль за коррозией</a>
-                                </li>
-                                <li>
-                                    <a href="Scaffolding_on_ship.php">Контроль нароста на корпусе</a>
+                                    <a href="Scaffolding_on_ship.php">Добавить рейс</a>
                                 </li>
                                 <li>
                                     <a href="Resource_of_exploitation.php">Ресурс эксплуатации</a>
@@ -86,7 +97,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                            <a href="Rezult_scaffoding.php?view=yes"><i class="fa fa-bar-chart-o fa-fw"></i> Cостояние судна</a>
                         </li>
                     </ul>
                 </div>
@@ -255,7 +266,7 @@
                         <!-- image ship -->
                         <div class="col-lg-6 col-md-6">
                             <div class="" align="justify">
-                                <img src="../Style/Ship/Ship_ccv-175.jpg" class="photo_ship img-rounded" height="500" width="800">
+                                <img src="../Style/Ship/Ship_ccv-175.jpg" class="photo_ship img-rounded img-responsive" height="500" width="800">
                             </div>
                         </div>
 
@@ -295,7 +306,6 @@
 </body>
 </html>
 <?php
-include("../Clasess/Class_ship.php");
 $ship= new Ship();
 $ship->View_ship_characteristics($_GET['name_ship']);
 

@@ -1,3 +1,7 @@
+<?php
+require_once "../Clasess/Class_logic.php";
+require_once "../Clasess/Class_ship.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,6 +79,11 @@
             </button>
             <a class="navbar-brand name_ship" id="Id_ship_name" href="index.php"></a>
         </div>
+        <div class="nav navbar-top-links navbar-right">
+            <form class="form-horizontal" action="../php/Exit_php.php" method="post" enctype="multipart/form-data" >
+                <input type="submit" class="btn btn-warning" value="Выйти из меню корабля">
+            </form>
+        </div>
         <!-- /.navbar-header -->
 
         <div class="navbar-default sidebar" role="navigation">
@@ -95,13 +104,10 @@
                         <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>Технические данные судна</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Состояние судна<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-table fa-fw"></i> Прогнозирование состояния судна<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="Corrosion_control.php">Контроль за коррозией</a>
-                            </li>
-                            <li>
-                                <a href="Scaffolding_on_ship.php">Контроль нароста на корпусе</a>
+                                <a href="Scaffolding_on_ship.php">Добавить рейс</a>
                             </li>
                             <li>
                                 <a href="Resource_of_exploitation.php">Ресурс эксплуатации</a>
@@ -110,7 +116,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        <a href="Rezult_scaffoding.php?view=yes"><i class="fa fa-bar-chart-o fa-fw"></i>Cостояние судна</a>
                     </li>
                 </ul>
             </div>
@@ -142,8 +148,11 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <form class="form-horizontal" action="../php/Add_new_resource.php" method="post" enctype="multipart/form-data" >
-                                <input type="submit" class="btn btn-primary" value="Потвердить" id="result" disabled="disabled">
+                            <form class="form-horizontal" action="Rezult_scaffoding.php?add_param=1" method="post" enctype="multipart/form-data" >
+                                <input type="submit" onclick="add_param();" class="btn btn-primary" value="Потвердить" id="result" disabled="disabled">
+                                <input type="hidden" id="Rezult_page" name="rezult_val" value="">
+                                <input type="hidden" id="Speed_page" name="speed_val" value="">
+                                <input type="hidden" id="id_mass_cargo" name="mass_cargo" value="">
                             </form>
                         </div>
                         <div class="panel-heading">
@@ -184,6 +193,7 @@
 
                                 var check = 0;
 
+                                var str_rezult="";
                                 var kol1="1";
                                 var canvas1=document.getElementById('1');
                                 var ctx1 = canvas1.getContext('2d');
@@ -409,6 +419,18 @@
                             <script>
                                 var mas_x_1=[];
                                 var mas_y_1=[];
+                                var str_rezult_1="";
+                                var str_rezult_2="";
+                                var str_rezult_3="";
+                                var str_rezult_4="";
+                                var str_rezult_5="";
+                                var str_rezult_6="";
+                                var str_rezult_7="";
+                                var str_rezult_8="";
+                                var str_rezult_9="";
+                                var str_rezult_10="";
+                                var str_rezult_11="";
+
                                 var count =0;
                                 function getCoordinate(x,y){
                                     mas_x_1.push(x);
@@ -438,7 +460,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = res * 2000;
-                                        alert(res);
+                                        str_rezult_1="1%"+res+"|";
                                     }
                                     count +=1;
                                 }
@@ -475,7 +497,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-80;
-                                        alert(res);
+                                        str_rezult_2="2%"+res+"|";
                                     }
                                     count_2 +=1;
                                 }
@@ -512,7 +534,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-80;
-                                        alert(res);
+                                        str_rezult_3="3%"+res+"|";
                                     }
                                     count_3 +=1;
                                 }
@@ -548,7 +570,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)+200;
-                                        alert(res);
+                                        str_rezult_4="4%"+res+"|";
                                     }
                                     count_4 +=1;
                                 }
@@ -584,7 +606,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-80;
-                                        alert(res);
+                                        str_rezult_5="5%"+res+"|";
                                     }
                                     count_5 +=1;
                                 }
@@ -620,7 +642,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-700;
-                                        alert(res);
+                                        str_rezult_6="6%"+res+"|";
                                     }
                                     count_6 +=1;
                                 }
@@ -655,8 +677,8 @@
                                         var length = Math.sqrt(sqrt_x + sqrt_y);
                                         var res = length * 0.02636;
                                         res= res / 3;
-                                        res = (res * 2000)-50;
-                                        alert(res);
+                                        res = (res * 2000)+200;
+                                        str_rezult_7="7%"+res+"|";
                                     }
                                     count_7 +=1;
                                 }
@@ -692,7 +714,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-80;
-                                        alert(res);
+                                        str_rezult_8="8%"+res+"|";
                                     }
                                     count_8 +=1;
                                 }
@@ -728,7 +750,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-80;
-                                        alert(res);
+                                        str_rezult_9="9%"+res+"|";
                                     }
                                     count_9 +=1;
                                 }
@@ -764,7 +786,7 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-80;
-                                        alert(res);
+                                        str_rezult_10="10%"+res+"|";
                                     }
                                     count_10 +=1;
                                 }
@@ -800,10 +822,16 @@
                                         var res = length * 0.02636;
                                         res= res / 3;
                                         res = (res * 2000)-2000;
-                                        alert(res);
+                                        str_rezult_11="11%"+res+"|";
                                     }
                                     count_11 +=1;
                                 }
+
+                                function add_param(){
+                                    str_rezult+=str_rezult_1+str_rezult_2+str_rezult_3+str_rezult_4+str_rezult_5+str_rezult_6+str_rezult_7+str_rezult_8+str_rezult_9+str_rezult_10+str_rezult_11;
+                                    $('#Rezult_page').val(str_rezult);
+                                }
+
                             </script>
                         </div>
                     </div>
@@ -884,13 +912,17 @@
 </body>
 </html>
 <?php
-
-require_once "../Clasess/Class_logic.php";
-echo("<script>
-                             
-                                
-</script>");
+echo("
+<script>           
+            $('#Speed_page').val('".$_POST['speed_ship']."');
+             $('#id_mass_cargo').val('".$_POST['mass_cargo']."');
+</script>
+");
 $logic = new Logic();
 $logic->View_peace_map($_POST['name_layer']);
 $logic->Clear_map_slice();
+
+$_SESSION['kol_vx_add']=0;//Счетчик количества вхождений для сстраницы результата
+$ship= new Ship();
+$ship->View_ship_characteristics($_SESSION['Name_ship']);
 ?>

@@ -1,3 +1,6 @@
+<?php
+include("../Clasess/Class_ship.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,6 +80,12 @@
             </button>
             <a class="navbar-brand name_ship" id="Id_ship_name" href="index.php"></a>
         </div>
+
+        <div class="nav navbar-top-links navbar-right">
+            <form class="form-horizontal" action="../php/Exit_php.php" method="post" enctype="multipart/form-data" >
+                <input type="submit" class="btn btn-warning" value="Выйти из меню корабля">
+            </form>
+        </div>
         <!-- /.navbar-header -->
 
         <div class="navbar-default sidebar" role="navigation">
@@ -97,13 +106,10 @@
                         <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>Технические данные судна</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Состояние судна<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-table fa-fw"></i>Прогнозирование состояния судна<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="Corrosion_control.php">Контроль за коррозией</a>
-                            </li>
-                            <li>
-                                <a href="Scaffolding_on_ship.php">Контроль нароста на корпусе</a>
+                                <a href="Scaffolding_on_ship.php">Добавить рейс</a>
                             </li>
                             <li>
                                 <a href="Resource_of_exploitation.php">Ресурс эксплуатации</a>
@@ -112,7 +118,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        <a href="Rezult_scaffoding.php?view=yes"><i class="fa fa-bar-chart-o fa-fw"></i> Cостояние судна</a>
                     </li>
                 </ul>
             </div>
@@ -137,17 +143,18 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Контроль нароста на корпусе <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Reference"><i class="glyphicon glyphicon-info-sign"></i></a></h1>
+                <h1 class="page-header">Расчет наростов количества наростов для рейса<a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Reference"><i class="glyphicon glyphicon-info-sign"></i></a></h1>
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Средняя скорость корабля: <input name="speed_ship" type="text" class="form-horizontal">
+                            <!--Средняя скорость корабля: <input name="speed_ship" type="text" placeholder="в узлах" class="form-horizontal" required> -->
 
                             <form class="form-horizontal" action="Select_map_scaffolding.php" method="post" enctype="multipart/form-data" >
-                            <input type="submit" value="Принять" id="save_param_button" class="btn btn-primary" onclick="save_param();" disabled="disabled">
+                                Введите вес груза: <input type="text" id="id_mass_cargo" placeholder="В тоннах" name="mass_cargo" required><br>
+                                <input type="submit" value="Принять" id="save_param_button" class="btn btn-primary" onclick="save_param();" disabled="disabled">
                                 <input type="hidden" id="param_layer" name="name_layer">
                                 <input type="hidden" id="param_speed_ship" name="speed_ship">
                             </form>
@@ -260,7 +267,6 @@
 </body>
 </html>
 <?php
-include("../Clasess/Class_ship.php");
 $ship= new Ship();
-//$ship->View_ship_characteristics($_SESSION['Name_ship']);
+$ship->View_ship_characteristics($_SESSION['Name_ship']);
 ?>
