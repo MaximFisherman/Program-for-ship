@@ -12,7 +12,7 @@ include("../Clasess/Class_ship.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>StopKorrozia</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,12 +58,15 @@ include("../Clasess/Class_ship.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand name_ship" id="Id_ship_name" href="index.html">CCB-175</a>
+                <a class="navbar-brand name_ship" id="Id_ship_name" href="index.html">Name ship</a>
             </div>
             <!-- /.navbar-header -->
             <div class="nav navbar-top-links navbar-right">
                 <form class="form-horizontal" action="../php/Exit_php.php" method="post" enctype="multipart/form-data" >
-                    <input type="submit" class="btn btn-warning" value="Выйти из меню корабля">
+                    <!--<input type="submit" class="btn btn-warning" value="Выйти из меню корабля">-->
+                    <button type="submit">
+                        <img src="../Style/logout.png">
+                    </button>
                 </form>
             </div>
 
@@ -307,8 +310,10 @@ include("../Clasess/Class_ship.php");
 </html>
 <?php
 $ship= new Ship();
-$ship->View_ship_characteristics($_GET['name_ship']);
-
 if (isset($_GET['name_ship']))
-$_SESSION['Name_ship']=$_GET['name_ship'];
+    $_SESSION['Name_ship']=$_GET['name_ship'];
+
+$ship->View_ship_characteristics($_SESSION['Name_ship']);
+
+
 ?>

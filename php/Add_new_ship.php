@@ -9,8 +9,8 @@ echo("maximum draft".$_POST['maximum_draft']);
 echo("Flag_ship".$_POST['Flag_ship']);
 $ship_class = new Ship();
 $str_engine=null;
-for($i=1;$i<=$_POST['length_count_ship_engine_php'];$i++)
-$str_engine.= $_POST['Engine_number_'.$i.'']."|";
+for($i=0;$i<$_POST['length_count_ship_engine_php'];$i++)
+$str_engine.= $_POST['Engine_number_'.($i+1).'']."|";
 echo("<br>".$str_engine);
 
 $uploaddir = '../File/Ship/';

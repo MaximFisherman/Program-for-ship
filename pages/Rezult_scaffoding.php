@@ -13,7 +13,7 @@ require_once "../Clasess/Class_ship.php";
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>StopKorrozia</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,7 +77,7 @@ require_once "../Clasess/Class_ship.php";
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">StopKorrozia</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -86,7 +86,10 @@ require_once "../Clasess/Class_ship.php";
         </div>
         <div class="nav navbar-top-links navbar-right">
             <form class="form-horizontal" action="../php/Exit_php.php" method="post" enctype="multipart/form-data" >
-            <input type="submit" class="btn btn-warning" value="Выйти из меню корабля">
+            <!--<input type="submit" class="btn btn-warning" value="Выйти из меню корабля">-->
+                <button type="submit">
+                    <img src="../Style/logout.png">
+                </button>
             </form>
         </div>
         <!-- /.navbar-header -->
@@ -146,7 +149,7 @@ require_once "../Clasess/Class_ship.php";
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Эффекты оказываемые на корабль</h1>
+                <h1 class="page-header">Эффекты оказываемые на корабль <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Reference"><i class="glyphicon glyphicon-info-sign"></i></a></h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -211,6 +214,19 @@ require_once "../Clasess/Class_ship.php";
                 <!-- /.panel -->
             </div>
 
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Диаграмма коррозийности по рейсам
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div id="Line-chart-corrosion"></div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
             <script>
 
 </script>
@@ -262,14 +278,14 @@ require_once "../Clasess/Class_ship.php";
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Справка по функции, "прогнозирование количества наростов"</h4>
+                <h4 class="modal-title" id="myModalLabel">Справка по функции, "Статистика корабля"</h4>
             </div>
             <div class="modal-body">
                 <form class="form-horizontal" action="../php/Add_new_resource.php" method="post" enctype="multipart/form-data" >
                     <fieldset>
                         <!-- Form Name -->
                         <p>
-                            Тут выводится прогнозное значение налета на корпусе корабля
+                            1 узел  = 1,852 км/ч (1 морская миля в час) или 0,514 м/с
                         </p>
                     </fieldset>
                 </form>

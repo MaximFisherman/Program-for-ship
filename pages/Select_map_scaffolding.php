@@ -13,7 +13,7 @@ require_once "../Clasess/Class_ship.php";
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>StopKorrozia</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -81,7 +81,10 @@ require_once "../Clasess/Class_ship.php";
         </div>
         <div class="nav navbar-top-links navbar-right">
             <form class="form-horizontal" action="../php/Exit_php.php" method="post" enctype="multipart/form-data" >
-                <input type="submit" class="btn btn-warning" value="Выйти из меню корабля">
+                <!--<input type="submit" class="btn btn-warning" value="Выйти из меню корабля">-->
+                <button type="submit">
+                    <img src="../Style/logout.png">
+                </button>
             </form>
         </div>
         <!-- /.navbar-header -->
@@ -181,7 +184,7 @@ require_once "../Clasess/Class_ship.php";
                             <canvas id='8' width="500" height="100">Обновите браузер</canvas><br><input type="button" class="btn btn-primary clearClass" value="Очистить" id="8_clear" disabled="disabled"> <br><br>
                             </div>
                             <div id="9_del">
-                            <canvas id='9' width="1600" height="500">Обновите браузер</canvas><br><input type="button" class="btn btn-primary clearClass" value="Очистить" id="9_clear" disabled="disabled"> <br><br>
+                            <canvas id='9' width="1600" height="200">Обновите браузер</canvas><br><input type="button" class="btn btn-primary clearClass" value="Очистить" id="9_clear" disabled="disabled"> <br><br>
                             </div>
                             <div id="10_del">
                             <canvas id='10' width="1600" height="150">Обновите браузер</canvas><br><input type="button" class="btn btn-primary clearClass" value="Очистить" id="10_clear" disabled="disabled"> <br><br>
@@ -198,12 +201,22 @@ require_once "../Clasess/Class_ship.php";
                                 var canvas1=document.getElementById('1');
                                 var ctx1 = canvas1.getContext('2d');
                                 //ctx.moveTo(0,0);
-                                ctx1.lineWidth = 3; // толщина линии
+                                 // толщина линии
+                                ctx1.lineWidth = 3;
                                 canvas1.onclick = function () {
                                     kol1+="2";
-                                    if(kol1.length==2){ctx1.moveTo(event.offsetX,event.offsetY); getCoordinate(event.offsetX,event.offsetY);}else {
+                                    if(kol1.length==2){
+                                        ctx1.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate(event.offsetX,event.offsetY);
+
+                                        ctx1.arc(event.offsetX, event.offsetY, 4, 0, Math.PI*2, false);
+                                        ctx1.fillStyle = 'red';
+                                        ctx1.fill();
+                                        ctx1.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx1.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx1.lineTo(x, y); //рисуем линию
                                         ctx1.stroke();
                                         check+=1;
@@ -221,9 +234,17 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas2.onclick = function () {
                                     kol2+="2";
-                                    if(kol2.length==2){ctx2.moveTo(event.offsetX,event.offsetY); getCoordinate_2(event.offsetX,event.offsetY);}else {
+                                    if(kol2.length==2){
+                                        ctx2.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_2(event.offsetX,event.offsetY);
+                                        ctx2.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx2.fillStyle = 'red';
+                                        ctx2.fill();
+                                        ctx2.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx2.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx2.lineTo(x, y); //рисуем линию
                                         ctx2.stroke();
                                         check+=1;
@@ -241,9 +262,17 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas3.onclick = function () {
                                     kol3+="2";
-                                    if(kol3.length==2){ctx3.moveTo(event.offsetX,event.offsetY);getCoordinate_3(event.offsetX,event.offsetY);}else {
+                                    if(kol3.length==2){
+                                        ctx3.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_3(event.offsetX,event.offsetY);
+                                        ctx3.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx3.fillStyle = 'red';
+                                        ctx3.fill();
+                                        ctx3.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx3.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx3.lineTo(x, y); //рисуем линию
                                         ctx3.stroke();
                                         check += 1;
@@ -262,9 +291,18 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas4.onclick = function () {
                                     kol4+="2";
-                                    if(kol4.length==2){ctx4.moveTo(event.offsetX,event.offsetY);getCoordinate_4(event.offsetX,event.offsetY);}else {
+                                    if(kol4.length==2){
+                                        ctx4.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_4(event.offsetX,event.offsetY);
+                                        ctx4.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
+                                        ctx4.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx4.fillStyle = 'red';
+                                        ctx4.fill();
+                                        ctx4.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx4.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx4.lineTo(x, y); //рисуем линию
                                         ctx4.stroke();
                                         check+=1;
@@ -282,9 +320,18 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas5.onclick = function () {
                                     kol5+="2";
-                                    if(kol5.length==2){ctx5.moveTo(event.offsetX,event.offsetY);getCoordinate_5(event.offsetX,event.offsetY);}else {
+                                    if(kol5.length==2){
+                                        ctx5.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_5(event.offsetX,event.offsetY);
+                                        ctx5.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
+                                        ctx5.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx5.fillStyle = 'red';
+                                        ctx5.fill();
+                                        ctx5.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx5.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx5.lineTo(x, y); //рисуем линию
                                         ctx5.stroke();
                                         check+=1;
@@ -302,9 +349,17 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas6.onclick = function () {
                                     kol6+="2";
-                                    if(kol6.length==2){ctx6.moveTo(event.offsetX,event.offsetY);getCoordinate_6(event.offsetX,event.offsetY);}else {
+                                    if(kol6.length==2){
+                                        ctx6.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_6(event.offsetX,event.offsetY);
+                                        ctx6.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
+                                        ctx6.fillStyle = 'red';
+                                        ctx6.fill();
+                                        ctx6.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx6.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx6.lineTo(x, y); //рисуем линию
                                         ctx6.stroke();
                                         check+=1;
@@ -322,9 +377,18 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas7.onclick = function () {
                                     kol7+="2";
-                                    if(kol7.length==2){ctx7.moveTo(event.offsetX,event.offsetY);getCoordinate_7(event.offsetX,event.offsetY);}else {
+                                    if(kol7.length==2){
+                                        ctx7.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_7(event.offsetX,event.offsetY);
+                                        ctx7.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
+                                        ctx7.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx7.fillStyle = 'red';
+                                        ctx7.fill();
+                                        ctx7.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx7.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx7.lineTo(x, y); //рисуем линию
                                         ctx7.stroke();
                                         check+=1;
@@ -343,9 +407,17 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas8.onclick = function () {
                                     kol8+="2";
-                                    if(kol8.length==2){ctx8.moveTo(event.offsetX,event.offsetY);getCoordinate_8(event.offsetX,event.offsetY);}else {
+                                    if(kol8.length==2){
+                                        ctx8.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_8(event.offsetX,event.offsetY);
+                                        ctx8.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx8.fillStyle = 'red';
+                                        ctx8.fill();
+                                        ctx8.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx8.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx8.lineTo(x, y); //рисуем линию
                                         ctx8.stroke();
                                         check+=1;
@@ -363,9 +435,17 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas9.onclick = function () {
                                     kol9+="2";
-                                    if(kol9.length==2){ctx9.moveTo(event.offsetX,event.offsetY);getCoordinate_9(event.offsetX,event.offsetY);}else {
+                                    if(kol9.length==2){
+                                        ctx9.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_9(event.offsetX,event.offsetY);
+                                        ctx9.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx9.fillStyle = 'red';
+                                        ctx9.fill();
+                                        ctx9.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx9.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx9.lineTo(x, y); //рисуем линию
                                         ctx9.stroke();
                                         check+=1;
@@ -383,9 +463,17 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas10.onclick = function () {
                                     kol10+="2";
-                                    if(kol10.length==2){ctx10.moveTo(event.offsetX,event.offsetY);getCoordinate_10(event.offsetX,event.offsetY);}else {
+                                    if(kol10.length==2){
+                                        ctx10.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_10(event.offsetX,event.offsetY);
+                                        ctx10.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx10.fillStyle = 'red';
+                                        ctx10.fill();
+                                        ctx10.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx10.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx10.lineTo(x, y); //рисуем линию
                                         ctx10.stroke();
                                         check+=1;
@@ -403,9 +491,17 @@ require_once "../Clasess/Class_ship.php";
 
                                 canvas11.onclick = function () {
                                     kol11+="2";
-                                    if(kol11.length==2){ctx11.moveTo(event.offsetX,event.offsetY);getCoordinate_11(event.offsetX,event.offsetY);}else {
+                                    if(kol11.length==2){
+                                        ctx11.moveTo(event.offsetX,event.offsetY);
+                                        getCoordinate_11(event.offsetX,event.offsetY);
+                                        ctx11.arc(event.offsetX, event.offsetY, 5, 0, Math.PI*2, false);
+                                        ctx11.fillStyle = 'red';
+                                        ctx11.fill();
+                                        ctx11.stroke();
+                                    }else {
                                         var x = event.offsetX;
                                         var y = event.offsetY;
+                                        ctx11.arc(event.offsetX, event.offsetY, 2, 0, Math.PI*2, false);
                                         ctx11.lineTo(x, y); //рисуем линию
                                         ctx11.stroke();
                                         check+=1;
@@ -901,7 +997,7 @@ require_once "../Clasess/Class_ship.php";
                     <fieldset>
                         <!-- Form Name -->
                         <p>
-                           На картах пометте приблизительную траекторию движения корабля
+                           На картах отметьте приблизительную траекторию движения корабля
                         </p>
                     </fieldset>
                 </form>

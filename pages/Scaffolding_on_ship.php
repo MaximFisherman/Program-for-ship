@@ -12,7 +12,7 @@ include("../Clasess/Class_ship.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>StopKorrozia</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +83,10 @@ include("../Clasess/Class_ship.php");
 
         <div class="nav navbar-top-links navbar-right">
             <form class="form-horizontal" action="../php/Exit_php.php" method="post" enctype="multipart/form-data" >
-                <input type="submit" class="btn btn-warning" value="Выйти из меню корабля">
+                <!--<input type="submit" class="btn btn-warning" value="Выйти из меню корабля">-->
+                <button type="submit">
+                    <img src="../Style/logout.png">
+                </button>
             </form>
         </div>
         <!-- /.navbar-header -->

@@ -8,6 +8,7 @@ class Logic extends Base
     public $gasoline_costs_mas = array();//Расход топлива на двигатели теоретический расход без наростов
     public $gasoline_costs_mas_real = array();//Реальный расход топлива с учетом наростов
     public $procent_effective;
+    public $corrosion_effect;//Эффект коррозии на корпус корабля
 
     public $time_reise = array();
 
@@ -41,15 +42,17 @@ class Logic extends Base
         $temp = ($kg_narost*0.07)/ 100 ;
 
         $effectivnost = ($sred_speed_ship * $temp)/1;
-        mysqli_query($this->dlink,"INSERT INTO `Narost`(`name`, `kg_narost`, `effectivnost`,time, way) VALUES ('".$name_ship."','".$kg_narost."','".$effectivnost."','".$time."','".$way."')");
+        mysqli_query($this->dlink,"INSERT INTO `Narost`(`name`, `kg_narost`, `effectivnost`,time, way, corrosion) VALUES ('".$name_ship."','".$kg_narost."','".$effectivnost."','".$time."','".$way."','".$this->corrosion_effect."')");
     }
 
     function view_statistic(){
-        $result =  mysqli_query($this->dlink, "SELECT  name,kg_narost,effectivnost From Narost where name like '%".$_SESSION['Name_ship']."%'");
+        $result =  mysqli_query($this->dlink, "SELECT  name,kg_narost,effectivnost,corrosion From Narost where name like '%".$_SESSION['Name_ship']."%'");
         $speed_down=null;
         $count_reice_ship=0;
+        $corrosion_effect = null;
         while($arr = mysqli_fetch_array($result)) {
             $speed_down += $arr['effectivnost'];
+            $corrosion_effect[$count_reice_ship]=$arr['corrosion'];
             $this->Calculation_oil($count_reice_ship);
             $count_reice_ship++;
         }
@@ -66,6 +69,24 @@ class Logic extends Base
         ]
     });
     </script>");
+    //Chart corrosion on the voyage
+        echo("<script>
+new Morris.Line({
+  element: 'Line-chart-corrosion',
+  data: [");
+
+        for($i=0;$i<$count_reice_ship;$i++) {
+            echo("
+    { y: '".($i+1)."', a: ".$corrosion_effect[$i]." },
+    ");
+        }
+        echo("],
+  xkey: 'y',
+  ykeys: ['a'],
+  labels: ['Количество проржавевшего метала в граммах']
+});
+</script>");
+
 
         //Диаграмма расхода топлива
         echo("<script>
@@ -139,7 +160,7 @@ new Morris.Line({
     function get_mass_ship(){
         $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,speed FROM `Ships` where name like '%".$_SESSION['Name_ship']."%'");
         while($arr = mysqli_fetch_array($result)) {
-            $this->weight = $arr['curb_weight'] - $arr['max_cargo'];
+            $this->weight_ship = $arr['curb_weight'] - $arr['max_cargo'];
         }
     }
 
@@ -201,14 +222,23 @@ new Morris.Line({
     }
 
 //Расчет процента коррозии металла корабля
-    function calculation_corrosion($mass_cargo,$length,$time){
+    function calculation_corrosion($mass_cargo,$time){
         $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,speed FROM `Ships` where name like '%".$_SESSION['Name_ship']."%'");
         $S = null; //Area
         $mass_ship=null;//weight ship
+        $M = null;//Общий вес корабля с грузом
         while($arr = mysqli_fetch_array($result)) {
             $S = 2*(($arr['height']*$arr['length'])+($arr['height']*$arr['width']+($arr['length']*$arr['width'])));
+            $M = $arr['curb_wight']-$arr['max_cargo']+$mass_cargo;
         }
-        echo("s=".$S);
+
+        $V=$M/($time*$S);
+
+        $this->Corrosion_boost_check();//Ускоритель коррозии метоала (при количестве наростов больше 30% от массы корабля)
+        if($this->corrosion_boost == 1)//Если значение ускорителя коррозии равно 1 то коррозия метала увеличивается в 1.5 раза
+        $this->corrosion_effect=abs($V)*$time*1.5;
+        else
+        $this->corrosion_effect=abs($V)*$time;
     }
 
 //Функция принимающая запрос со стороны клиента и обрабатывает и запихивает значения в БД
@@ -243,7 +273,7 @@ new Morris.Line({
             if(strcasecmp($number[$i],'3')||strcasecmp($number[$i],'4')||strcasecmp($number[$i],'7'))
                 $zone_temperature[$i] = 0.075 * $t_ship[$i];
         }
-        $this->calculation_corrosion($mass_cargo,$sum_length,$sum_time);//Подсчет коррозийного эффекта а рейс
+        $this->calculation_corrosion($mass_cargo,$sum_time);//Подсчет коррозийного эффекта а рейс
         $kg_narost=null;
         for($i=0;$i<count($temp_length)-1;$i++){
             $kg_narost += $zone_temperature[$i];

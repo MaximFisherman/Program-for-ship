@@ -8,7 +8,7 @@ class Ship extends Base
 
         $str =  explode("|",$str_engine);
 
-        for($i=0;$i<count($str);$i++) {
+        for($i=0;$i<count($str)-1;$i++) {
             mysqli_query($this->dlink, " INSERT INTO `Engine_ship`(`name`, `power`) VALUES ('" . $name_ship . "','" . $str[$i] . "')");
         }
         echo("<script>document.location.replace('../pages/Start_page.php');</script>");
@@ -23,7 +23,8 @@ class Ship extends Base
     }
 
     function Add_resource($date_resource,$element_resource,$hour_guarantee){
-        mysqli_query($this->dlink,"INSERT INTO `Ship_Resource`(`name_ship`, `date_resource`, `element`, `hour_guarantee`) VALUES ('".$_SESSION['Name_ship']."','".$date_resource."','".$element_resource."','".$hour_guarantee."')");
+        mysqli_query($this->dlink,"INSERT INTO `Ship_Resource`(`name_ship`, `date_resource`, `element`, `hour_guarantee`,flag) VALUES ('".$_SESSION['Name_ship']."','".$date_resource."','".$element_resource."','".$hour_guarantee."','1')");
+            $this->State_res(); //Внесение поправки в статистику с учетом нового параметра ремонта
     }
 
     function View_resource_ship_to_table(){
@@ -39,8 +40,30 @@ class Ship extends Base
         ");
         }
 
-        echo("<script>$('#Resource_of_exploitation').html($str);</script>");
+        //echo("<script>$('#Resource_of_exploitation').html($str);</script>");
     }
+
+    //Применение новой работы для смены статистики рейса
+    function State_res(){
+        $result =  mysqli_query($this->dlink, "SELECT `id`, `name_ship`, `date_resource`, `element`, `hour_guarantee`,flag FROM `Ship_Resource` where name_ship like '%".$_SESSION['Name_ship']."%'");
+        $state_work = null;
+        while($arr = mysqli_fetch_array($result)) {
+            if(strcasecmp($arr["element"],'Очистка корпуса')==0&&$arr['flag']='1'){
+                mysqli_query($this->dlink, "UPDATE `Narost` SET `kg_narost`='0',`effectivnost`='0' WHERE name like '%".$_SESSION['Name_ship']."%' ");
+                mysqli_query($this->dlink, "UPDATE `Ship_Resource` SET `flag`='0' WHERE  name like '%".$_SESSION['Name_ship']."%' ");
+            }
+            if(strcasecmp($arr["element"],'Замена корпуса')==0&&$arr['flag']='1'){
+                mysqli_query($this->dlink, "UPDATE `Narost` SET `corrosion`='0' WHERE name like '%".$_SESSION['Name_ship']."%' ");
+                mysqli_query($this->dlink, "UPDATE `Ship_Resource` SET `flag`='0' WHERE  name like '%".$_SESSION['Name_ship']."%' ");
+            }
+            if(strcasecmp($arr["element"],'Ремонт корпуса')==0&&$arr['flag']='1'){
+                mysqli_query($this->dlink, "UPDATE `Narost` SET `corrosion`='0' WHERE name like '%".$_SESSION['Name_ship']."%' ");
+                mysqli_query($this->dlink, "UPDATE `Ship_Resource` SET `flag`='0' WHERE  name like '%".$_SESSION['Name_ship']."%' ");
+            }
+        }
+    }
+
+
 
     function View_ship_characteristics($nameship){
         $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship FROM `Ships` where name like '%".$nameship."%'");
