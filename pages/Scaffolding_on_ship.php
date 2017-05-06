@@ -146,7 +146,7 @@ include("../Clasess/Class_ship.php");
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Расчет наростов количества наростов для рейса<a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Reference"><i class="glyphicon glyphicon-info-sign"></i></a></h1>
+                <h1 class="page-header">Выбор региона плавания судна<a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Reference"><i class="glyphicon glyphicon-info-sign"></i></a></h1>
             </div>
             <!-- /.row -->
             <div class="row">
