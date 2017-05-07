@@ -180,8 +180,8 @@ new Morris.Line({
         }
     }
 
-    function get_procent_effective(){
-        $result =  mysqli_query($this->dlink, "SELECT  name,kg_narost,effectivnost From Narost where name like '%".$_SESSION['Name_ship']."%'");
+    function get_procent_effective($i){
+        $result =  mysqli_query($this->dlink, "SELECT  name,kg_narost,effectivnost From Narost where name like '%".$_SESSION['Name_ship']."%' limit ".($i+1)."");
         $sum_narost=null;
         while($arr = mysqli_fetch_array($result)) {
              $sum_narost += $arr['kg_narost'];
@@ -206,7 +206,7 @@ new Morris.Line({
             $TEMP_summ_coast_gazoline_real = $summ_coast_gazoline;
 
             //Реальные затраты топлива с учетом наростов на корпусе
-            $this->get_procent_effective();//Получение процента эфективности и расчет того какой процент наростов и на сколько процентов влияет на эфективность судна
+            $this->get_procent_effective($i);//Получение процента эфективности и расчет того какой процент наростов и на сколько процентов влияет на эфективность судна
             $Edit_coast_gazoline = ( $TEMP_summ_coast_gazoline_real * $this->procent_effective )/1;
 
             $summ_coast_gazoline_real+=$Edit_coast_gazoline;;

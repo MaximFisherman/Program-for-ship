@@ -53,11 +53,11 @@ class Ship extends Base
                 mysqli_query($this->dlink, "UPDATE `Ship_Resource` SET `flag`='0' WHERE  name like '%".$_SESSION['Name_ship']."%' ");
             }
             if(strcasecmp($arr["element"],'Замена корпуса')==0&&$arr['flag']='1'){
-                mysqli_query($this->dlink, "UPDATE `Narost` SET `corrosion`='0' WHERE name like '%".$_SESSION['Name_ship']."%' ");
+                mysqli_query($this->dlink, "UPDATE `Narost` SET `corrosion`='0',kg_narost='0',`effectivnost`='0' WHERE name like '%".$_SESSION['Name_ship']."%' ");
                 mysqli_query($this->dlink, "UPDATE `Ship_Resource` SET `flag`='0' WHERE  name like '%".$_SESSION['Name_ship']."%' ");
             }
             if(strcasecmp($arr["element"],'Ремонт корпуса')==0&&$arr['flag']='1'){
-                mysqli_query($this->dlink, "UPDATE `Narost` SET `corrosion`='0' WHERE name like '%".$_SESSION['Name_ship']."%' ");
+                mysqli_query($this->dlink, "UPDATE `Narost` SET `corrosion`='0',kg_narost='0',`effectivnost`='0 WHERE name like '%".$_SESSION['Name_ship']."%' ");
                 mysqli_query($this->dlink, "UPDATE `Ship_Resource` SET `flag`='0' WHERE  name like '%".$_SESSION['Name_ship']."%' ");
             }
         }
