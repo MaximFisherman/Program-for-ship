@@ -152,9 +152,7 @@ class Ship extends Base
         $('#id_maximum_draft').val('".$arr['max_draft']."');
         $('#id_Speed_ship').val('".$arr['speed']."');
         $('#id_flag_ship').val('".$arr['flag']."');
-        
-        //Photo ship 
-        $('.del_div').remove();
+       
         
         //Secret input 
          $('#edit_ship').val('".$arr['name']."');

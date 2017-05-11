@@ -15,11 +15,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Start_page.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Start_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/Start_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="43" column="177" lean-forward="false" selection-start-line="43" selection-start-column="177" selection-end-line="43" selection-end-column="177" />
+            <state relative-caret-position="268">
+              <caret line="50" column="27" lean-forward="false" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Add_new_ship.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/Add_new_ship.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -38,7 +48,7 @@
       <file leaf-file-name="Rezult_scaffoding.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/Rezult_scaffoding.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
+            <state relative-caret-position="372">
               <caret line="381" column="42" lean-forward="true" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="42" />
               <folding>
                 <marker date="1494491526718" expanded="true" signature="18154:18201" ph="..." />
@@ -50,82 +60,82 @@
       <file leaf-file-name="Class_ship.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Clasess/Class_ship.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="156" column="19" lean-forward="false" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
+            <state relative-caret-position="213">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="87" />
               <folding>
-                <marker date="1494496059942" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
-                <marker date="1494496059942" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
-                <marker date="1494496059942" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
-                <marker date="1494496059942" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
-                <marker date="1494496059942" expanded="true" signature="2005:2059" ph="DELETE FROM " />
-                <marker date="1494496059942" expanded="true" signature="2153:2191" ph="DELETE FROM " />
-                <marker date="1494496059942" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
-                <marker date="1494496059942" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
-                <marker date="1494496059942" expanded="true" signature="2970:3451" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
-                <marker date="1494496059942" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
-                <marker date="1494496059942" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
-                <marker date="1494496059942" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
-                <marker date="1494496059942" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
-                <marker date="1494496059942" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
-                <marker date="1494496059942" expanded="true" signature="5478:6265" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
-                <marker date="1494496059942" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
-                <marker date="1494496059942" expanded="true" signature="7286:7384" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
-                <marker date="1494496059942" expanded="true" signature="7842:8918" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="8518:8596" ph="//..." />
-                <marker date="1494496059942" expanded="true" signature="9144:9271" ph="SELECT `name... Ships" />
-                <marker date="1494496059942" expanded="true" signature="9320:10060" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="9344:10060" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="9390:10060" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="9465:10060" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="9564:10060" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="9611:10043" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="10055:10060" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11079:13672" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11275:12469" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11310:12427" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11344:12388" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11383:11653" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11690:12164" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11727:11819" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11854:11955" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="11990:12151" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="12204:12373" ph="..." />
-                <marker date="1494496059942" expanded="false" signature="12279:12291" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="12607:13659" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="12642:13617" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="12676:13578" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="12715:12986" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="13023:13201" ph="..." />
-                <marker date="1494496059942" expanded="true" signature="13239:13563" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
+                <marker date="1494499652567" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
+                <marker date="1494499652567" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
+                <marker date="1494499652567" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
+                <marker date="1494499652567" expanded="true" signature="2005:2059" ph="DELETE FROM " />
+                <marker date="1494499652567" expanded="true" signature="2153:2191" ph="DELETE FROM " />
+                <marker date="1494499652567" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
+                <marker date="1494499652567" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
+                <marker date="1494499652567" expanded="true" signature="2970:3451" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
+                <marker date="1494499652567" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
+                <marker date="1494499652567" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
+                <marker date="1494499652567" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
+                <marker date="1494499652567" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
+                <marker date="1494499652567" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
+                <marker date="1494499652567" expanded="true" signature="5478:6265" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
+                <marker date="1494499652567" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
+                <marker date="1494499652567" expanded="true" signature="7286:7384" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
+                <marker date="1494499652567" expanded="true" signature="7842:8863" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="8508:8541" ph="//..." />
+                <marker date="1494499652567" expanded="true" signature="9089:9216" ph="SELECT `name... Ships" />
+                <marker date="1494499652567" expanded="true" signature="9265:10005" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="9289:10005" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="9335:10005" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="9410:10005" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="9509:10005" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="9556:9988" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="10000:10005" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11024:13617" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11220:12414" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11255:12372" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11289:12333" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11328:11598" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11635:12109" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11672:11764" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11799:11900" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="11935:12096" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="12149:12318" ph="..." />
+                <marker date="1494499652567" expanded="false" signature="12224:12236" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="12552:13604" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="12587:13562" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="12621:13523" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="12660:12931" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="12968:13146" ph="..." />
+                <marker date="1494499652567" expanded="true" signature="13184:13508" ph="..." />
               </folding>
             </state>
           </provider>
@@ -180,10 +190,10 @@
         <option value="$PROJECT_DIR$/php/Add_new_resource.php" />
         <option value="$PROJECT_DIR$/Clasess/Class_logic.php" />
         <option value="$PROJECT_DIR$/php/Edit_ship_record.php" />
-        <option value="$PROJECT_DIR$/php/Add_new_ship.php" />
         <option value="$PROJECT_DIR$/pages/Rezult_scaffoding.php" />
-        <option value="$PROJECT_DIR$/Clasess/Class_ship.php" />
         <option value="$PROJECT_DIR$/pages/Start_page.php" />
+        <option value="$PROJECT_DIR$/Clasess/Class_ship.php" />
+        <option value="$PROJECT_DIR$/php/Add_new_ship.php" />
       </list>
     </option>
   </component>
@@ -358,12 +368,12 @@
       <workItem from="1494145114623" duration="6705000" />
       <workItem from="1494404579805" duration="1735000" />
       <workItem from="1494406363756" duration="1843000" />
-      <workItem from="1494408352144" duration="17256000" />
+      <workItem from="1494408352144" duration="18770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174155000" />
+    <option name="totallyTimeSpent" value="175669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -444,79 +454,79 @@
         <state relative-caret-position="187">
           <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
-            <marker date="1494496059942" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
-            <marker date="1494496059942" expanded="true" signature="2005:2059" ph="DELETE FROM " />
-            <marker date="1494496059942" expanded="true" signature="2153:2191" ph="DELETE FROM " />
-            <marker date="1494496059942" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
-            <marker date="1494496059942" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
-            <marker date="1494496059942" expanded="true" signature="2970:3451" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
-            <marker date="1494496059942" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="5478:6265" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
-            <marker date="1494496059942" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
-            <marker date="1494496059942" expanded="true" signature="7286:7384" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="7842:8918" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="8518:8596" ph="//..." />
-            <marker date="1494496059942" expanded="true" signature="9144:9271" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="9320:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9344:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9390:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9465:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9564:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9611:10043" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="10055:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11079:13672" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11275:12469" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11310:12427" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11344:12388" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11383:11653" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11690:12164" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11727:11819" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11854:11955" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11990:12151" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12204:12373" ph="..." />
-            <marker date="1494496059942" expanded="false" signature="12279:12291" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12607:13659" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12642:13617" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12676:13578" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12715:12986" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="13023:13201" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="13239:13563" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
+            <marker date="1494499652567" expanded="true" signature="2005:2059" ph="DELETE FROM " />
+            <marker date="1494499652567" expanded="true" signature="2153:2191" ph="DELETE FROM " />
+            <marker date="1494499652567" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
+            <marker date="1494499652567" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
+            <marker date="1494499652567" expanded="true" signature="2970:3451" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
+            <marker date="1494499652567" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="5478:6265" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
+            <marker date="1494499652567" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
+            <marker date="1494499652567" expanded="true" signature="7286:7384" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="7842:8863" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="8508:8541" ph="//..." />
+            <marker date="1494499652567" expanded="true" signature="9089:9216" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="9265:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9289:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9335:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9410:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9509:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9556:9988" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="10000:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11024:13617" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11220:12414" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11255:12372" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11289:12333" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11328:11598" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11635:12109" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11672:11764" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11799:11900" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11935:12096" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12149:12318" ph="..." />
+            <marker date="1494499652567" expanded="false" signature="12224:12236" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12552:13604" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12587:13562" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12621:13523" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12660:12931" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12968:13146" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="13184:13508" ph="..." />
           </folding>
         </state>
       </provider>
@@ -563,79 +573,79 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1494496059942" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
-            <marker date="1494496059942" expanded="true" signature="2005:2059" ph="DELETE FROM " />
-            <marker date="1494496059942" expanded="true" signature="2153:2191" ph="DELETE FROM " />
-            <marker date="1494496059942" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
-            <marker date="1494496059942" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
-            <marker date="1494496059942" expanded="true" signature="2970:3451" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
-            <marker date="1494496059942" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="5478:6265" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
-            <marker date="1494496059942" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
-            <marker date="1494496059942" expanded="true" signature="7286:7384" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="7842:8918" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="8518:8596" ph="//..." />
-            <marker date="1494496059942" expanded="true" signature="9144:9271" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="9320:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9344:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9390:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9465:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9564:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9611:10043" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="10055:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11079:13672" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11275:12469" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11310:12427" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11344:12388" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11383:11653" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11690:12164" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11727:11819" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11854:11955" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11990:12151" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12204:12373" ph="..." />
-            <marker date="1494496059942" expanded="false" signature="12279:12291" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12607:13659" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12642:13617" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12676:13578" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12715:12986" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="13023:13201" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="13239:13563" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
+            <marker date="1494499652567" expanded="true" signature="2005:2059" ph="DELETE FROM " />
+            <marker date="1494499652567" expanded="true" signature="2153:2191" ph="DELETE FROM " />
+            <marker date="1494499652567" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
+            <marker date="1494499652567" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
+            <marker date="1494499652567" expanded="true" signature="2970:3451" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
+            <marker date="1494499652567" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="5478:6265" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
+            <marker date="1494499652567" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
+            <marker date="1494499652567" expanded="true" signature="7286:7384" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="7842:8863" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="8508:8541" ph="//..." />
+            <marker date="1494499652567" expanded="true" signature="9089:9216" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="9265:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9289:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9335:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9410:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9509:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9556:9988" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="10000:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11024:13617" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11220:12414" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11255:12372" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11289:12333" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11328:11598" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11635:12109" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11672:11764" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11799:11900" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11935:12096" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12149:12318" ph="..." />
+            <marker date="1494499652567" expanded="false" signature="12224:12236" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12552:13604" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12587:13562" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12621:13523" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12660:12931" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12968:13146" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="13184:13508" ph="..." />
           </folding>
         </state>
       </provider>
@@ -851,19 +861,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/Add_new_ship.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/Edit_ship_record.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/Start_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="50" column="27" lean-forward="false" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clasess/Class_ship.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="87" />
+          <folding>
+            <marker date="1494499652567" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
+            <marker date="1494499652567" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
+            <marker date="1494499652567" expanded="true" signature="2005:2059" ph="DELETE FROM " />
+            <marker date="1494499652567" expanded="true" signature="2153:2191" ph="DELETE FROM " />
+            <marker date="1494499652567" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
+            <marker date="1494499652567" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
+            <marker date="1494499652567" expanded="true" signature="2970:3451" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
+            <marker date="1494499652567" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
+            <marker date="1494499652567" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
+            <marker date="1494499652567" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="5478:6265" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
+            <marker date="1494499652567" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
+            <marker date="1494499652567" expanded="true" signature="7286:7384" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="7842:8863" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="8508:8541" ph="//..." />
+            <marker date="1494499652567" expanded="true" signature="9089:9216" ph="SELECT `name... Ships" />
+            <marker date="1494499652567" expanded="true" signature="9265:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9289:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9335:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9410:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9509:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="9556:9988" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="10000:10005" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11024:13617" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11220:12414" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11255:12372" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11289:12333" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11328:11598" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11635:12109" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11672:11764" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11799:11900" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="11935:12096" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12149:12318" ph="..." />
+            <marker date="1494499652567" expanded="false" signature="12224:12236" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12552:13604" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12587:13562" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12621:13523" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12660:12931" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="12968:13146" ph="..." />
+            <marker date="1494499652567" expanded="true" signature="13184:13508" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/Rezult_scaffoding.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="381" column="42" lean-forward="true" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="42" />
+          <folding>
+            <marker date="1494491526718" expanded="true" signature="18154:18201" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -875,102 +977,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/Rezult_scaffoding.php">
+    <entry file="file://$PROJECT_DIR$/php/Add_new_ship.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="381" column="42" lean-forward="true" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="42" />
-          <folding>
-            <marker date="1494491526718" expanded="true" signature="18154:18201" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clasess/Class_ship.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="156" column="19" lean-forward="false" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
-          <folding>
-            <marker date="1494496059942" expanded="true" signature="321:476" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:493" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:510" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:561" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:592" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:608" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:638" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:661" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:680" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="321:681" ph="INSERT INTO `Ships`... " />
-            <marker date="1494496059942" expanded="true" signature="811:862" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="811:884" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="811:902" ph="INSERT INTO `Engine_ship`... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1247" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1342" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1364" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1386" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1387" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1414" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1444" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1473" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1522" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1553" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1577" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1587" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1590" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1229:1606" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="1739:1821" ph="UPDATE `Engi... " />
-            <marker date="1494496059942" expanded="true" signature="2005:2059" ph="DELETE FROM " />
-            <marker date="1494496059942" expanded="true" signature="2153:2191" ph="DELETE FROM " />
-            <marker date="1494496059942" expanded="true" signature="2322:2522" ph="INSERT INTO `Ship_Resource`... " />
-            <marker date="1494496059942" expanded="true" signature="2723:2863" ph="SELECT id,`n... Ship_Resource" />
-            <marker date="1494496059942" expanded="true" signature="2970:3451" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="3692:3840" ph="SELECT `id`,... Ship_Resource" />
-            <marker date="1494496059942" expanded="true" signature="4052:4153" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4202:4287" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="4433:4548" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4597:4682" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="4828:4943" ph="UPDATE `Naro... " />
-            <marker date="1494496059942" expanded="true" signature="4991:5076" ph="UPDATE `Ship... " />
-            <marker date="1494496059942" expanded="true" signature="5212:5384" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="5478:6265" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="6776:6848" ph="Select `name... Engine_ship" />
-            <marker date="1494496059942" expanded="true" signature="7093:7165" ph="Select `name... Engine_ship" />
-            <marker date="1494496059942" expanded="true" signature="7286:7384" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="7509:7689" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="7842:8918" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="8518:8596" ph="//..." />
-            <marker date="1494496059942" expanded="true" signature="9144:9271" ph="SELECT `name... Ships" />
-            <marker date="1494496059942" expanded="true" signature="9320:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9344:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9390:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9465:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9564:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="9611:10043" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="10055:10060" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11079:13672" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11275:12469" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11310:12427" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11344:12388" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11383:11653" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11690:12164" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11727:11819" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11854:11955" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="11990:12151" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12204:12373" ph="..." />
-            <marker date="1494496059942" expanded="false" signature="12279:12291" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12607:13659" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12642:13617" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12676:13578" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="12715:12986" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="13023:13201" ph="..." />
-            <marker date="1494496059942" expanded="true" signature="13239:13563" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/Start_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="43" column="177" lean-forward="false" selection-start-line="43" selection-start-column="177" selection-end-line="43" selection-end-column="177" />
+        <state relative-caret-position="493">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding />
         </state>
       </provider>

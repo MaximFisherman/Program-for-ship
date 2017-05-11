@@ -201,7 +201,7 @@
                             <div class="form-group del_div">
                                 <label class="col-md-4 control-label" for=""> Фото корабля:</label>
                                 <div class="col-md-7">
-                                     <input name="photo_new_ship" id="id_photo_new_ship" type="file" value="../File/Ship/591418670a4c4.jpg" />
+                                     <input name="photo_new_ship" id="id_photo_new_ship" multiple type="file" value="" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -230,6 +230,9 @@ function Del_edit_param(){
     //Close input
     $('#id_Name_ship').prop('disabled', false);
 
+    $('#id_photo_new_ship').val('../File/Ship/591418670a4c4.jpg');
+
+
     $('#id_Height_ship').val('');
     $('#id_Width_ship').val('');
     $('#id_Length_ship').val('');
@@ -239,6 +242,7 @@ function Del_edit_param(){
     $('#id_maximum_draft').val('');
     $('#id_Speed_ship').val('');
     $('#id_flag_ship').val('');
+
     $(".delete_input").remove();
     //Secret input
     $('#edit_ship').val('');
