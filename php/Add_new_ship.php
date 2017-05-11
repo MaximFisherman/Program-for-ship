@@ -13,6 +13,7 @@ for($i=0;$i<$_POST['length_count_ship_engine_php'];$i++)
 $str_engine.= $_POST['Engine_number_'.($i+1).'']."|";
 echo("<br>".$str_engine);
 
+if(!(isset($name_file))) {
     $uploaddir = '../File/Ship/';
     $uploadfile = $uploaddir . basename($_FILES['photo_new_ship']['name']);
     $name_file = null;
@@ -23,11 +24,17 @@ echo("<br>".$str_engine);
     } else {
         echo "";
     }
+}
 
 if($_POST['name_edit_ship']!=''){
-        if(isset($name_file))
-    $ship_class->Update_ship($_POST['name_edit_ship'], $_POST['Type_ship'], $_POST['Year_start_ship'], $_POST['Height_ship'], $_POST['Length_ship'], $_POST['Width_ship'], $_POST['Curb_weight'], $_POST["Lifting_capacity"], $_POST['maximum_draft'], $_POST['Flag_ship'], $name_file, $_POST['Speed_ship'], $str_engine);
-        else echo("<script>document.location.replace('../pages/Start_page.php');</script>");
+
+        if(isset($name_file)) {
+            $ship_class->Update_ship($_POST['name_edit_ship'], $_POST['Type_ship'], $_POST['Year_start_ship'], $_POST['Height_ship'], $_POST['Length_ship'], $_POST['Width_ship'], $_POST['Curb_weight'], $_POST["Lifting_capacity"], $_POST['maximum_draft'], $_POST['Flag_ship'], $name_file, $_POST['Speed_ship'], $str_engine);
+        }else {
+            $name_file = $ship_class->Get_Path($_POST['name_edit_ship']);
+            echo("Hello ".$name_file);
+            $ship_class->Update_ship($_POST['name_edit_ship'], $_POST['Type_ship'], $_POST['Year_start_ship'], $_POST['Height_ship'], $_POST['Length_ship'], $_POST['Width_ship'], $_POST['Curb_weight'], $_POST["Lifting_capacity"], $_POST['maximum_draft'], $_POST['Flag_ship'], $name_file, $_POST['Speed_ship'], $str_engine);
+        }
 
 }else {
     $ship_class->Add_ship($_POST['Name_ship'], $_POST['Type_ship'], $_POST['Year_start_ship'], $_POST['Height_ship'], $_POST['Length_ship'], $_POST['Width_ship'], $_POST['Curb_weight'], $_POST["Lifting_capacity"], $_POST['maximum_draft'], $_POST['Flag_ship'], $name_file, $_POST['Speed_ship'], $str_engine);

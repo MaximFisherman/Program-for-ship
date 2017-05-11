@@ -16,6 +16,14 @@ class Ship extends Base
         echo("<script>document.location.replace('../pages/Start_page.php');</script>");
     }
 
+    function Get_Path($name_ship){
+        $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship FROM `Ships` where name like '%".$name_ship."%'");
+        $name_file = 0;
+        while($arr = mysqli_fetch_array($result)) {
+        $name_file = $arr['photo_ship'];
+        }
+        return $name_file;
+    }
 
     function Update_ship($name_ship,$type_ship,$build_year_ship,$height,$length,$width,$snar_cargo,$max_cargo,$max_draft,$flag,$name_file_photo,$etalon_speed,$str_engine)
     {
