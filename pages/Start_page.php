@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-15 well">
-                    <a class="btn btn-primary" data-toggle="modal" data-target="#usuario"><i class="fa fa-fw -square -circle fa-plus-square"></i>Добавить корабль</a>
+                    <a class="btn btn-primary" onclick="Del_edit_param();" data-toggle="modal" data-target="#usuario"><i class="fa fa-fw -square -circle fa-plus-square"></i>Добавить корабль</a>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row" >
                 <div class="col-md-13 well" >
-                    <input id="search" name="search_naem" class="form-group" placeholder="Поиск" type="text" required="" >	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+                    <!--<input id="search" name="search_naem" class="form-group" placeholder="Поиск" type="text" required="" >	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;-->
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
                                 <label class="col-md-4 control-label" for="prependedtext">Имя корабля</label>
                                 <div class="col-md-5">
                                     <div class="input-group">
-                                        <input id="prependedtext" name="Name_ship" class="form-control" placeholder="Имя корабля" type="text" required="">
+                                        <input id="id_Name_ship" name="Name_ship" class="form-control" placeholder="Имя корабля" type="text" required="">
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                 <label class="col-md-4 control-label" for="nombre">Высота корабля</label>
                                 <div class="col-md-5">
                                     <div class="input-group">
-                                        <input id="nombre" name="Height_ship" class="form-control" placeholder="Высота корабля в метрах" type="text" required="">
+                                        <input id="id_Height_ship" name="Height_ship" class="form-control" placeholder="Высота корабля в метрах" type="text" required="">
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                 <label class="col-md-4 control-label" for="nombre">Ширина корабля</label>
                                 <div class="col-md-5">
                                     <div class="input-group">
-                                        <input id="position" name="Width_ship" class="form-control" placeholder="Ширина корабля в метрах" type="text" required="">
+                                        <input id="id_Width_ship" name="Width_ship" class="form-control" placeholder="Ширина корабля в метрах" type="text" required="">
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                                 <label class="col-md-4 control-label" for=''>Длина корабля</label>
                                 <div class="col-md-5">
                                     <div class="input-group">
-                                        <input id="email_police" name="Length_ship" class="form-control" placeholder="Длина корабля в метрах" type="text" required="">
+                                        <input id="id_Length_ship" name="Length_ship" class="form-control" placeholder="Длина корабля в метрах" type="text" required="">
                                     </div>
                                 </div>
                             </div>
@@ -157,7 +157,7 @@
                                 <label class="col-md-4 control-label" for="Maximum draft">Средняя скорость корабля</label>
                                 <div class="col-md-5">
                                     <div class="input-group">
-                                        <input id="id_flag_ship" name="Speed_ship" class="form-control" placeholder="В узлах" type="text" required="">
+                                        <input id="id_Speed_ship" name="Speed_ship" class="form-control" placeholder="В узлах" type="text" required="">
                                     </div>
                                 </div>
                             </div>
@@ -171,12 +171,15 @@
                                     <div id="div_engine_ship_count"></div>
                                 </div>
                             </div>
+                            <input type="hidden" id="edit_ship" name="name_edit_ship" value="">
+
                             <script>
+
                                 $( "#ship_engine_count" ).change(function() {
                                     var value = $(this).val();
                                     $("#div_engine_ship_count").empty();
                                     for(var i=1;i<=value;i++)
-                                        $('#div_engine_ship_count').append('Номер двигателя '+i+': <input type="text" class="form-control" placeholder="Мощность двигателя" name="Engine_number_'+i+'" required> <br> ');
+                                        $('#div_engine_ship_count').append('<div class="delete_input">Номер двигателя '+i+': <input type="text" class="form-control" placeholder="Мощность двигателя" id="id_Engine_number_'+i+'" name="Engine_number_'+i+'" required> <br> </div>');
                                     $('#length_count_ship_engine').val(value);
                                 });
                             </script>
@@ -185,7 +188,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="departamento">Тип корабля</label>
                                 <div class="col-md-5">
-                                    <select id="departamento" name="Type_ship" class="form-control">
+                                    <select id="id_Type_ship" name="Type_ship" class="form-control">
                                         <option value="Сухогруз">Сухогруз</option>
                                         <option value="Танкер">Танкер</option>
                                         <option value="Балкер">Балкер</option>
@@ -195,10 +198,10 @@
                                 </div>
                             </div>
                             <!-- File Button -->
-                            <div class="form-group">
+                            <div class="form-group del_div">
                                 <label class="col-md-4 control-label" for=""> Фото корабля:</label>
                                 <div class="col-md-7">
-                                     <input name="photo_new_ship" multiple type="file" />
+                                     <input name="photo_new_ship" id="id_photo_new_ship" type="file" value="../File/Ship/591418670a4c4.jpg" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -220,9 +223,40 @@
 function Delete_ship(name) {
     $.post("../php/Delete_ship_record.php", {id_ship: name.id}, function () {
     });
-
 }
 
+function Del_edit_param(){
+    $('#id_Name_ship').val('');
+    //Close input
+    $('#id_Name_ship').prop('disabled', false);
+
+    $('#id_Height_ship').val('');
+    $('#id_Width_ship').val('');
+    $('#id_Length_ship').val('');
+    $('#id_year_start_ship').val('');
+    $('#id_Lifting_capacity').val('');
+    $('#id_Curb_weight').val('');
+    $('#id_maximum_draft').val('');
+    $('#id_Speed_ship').val('');
+    $('#id_flag_ship').val('');
+    $(".delete_input").remove();
+    //Secret input
+    $('#edit_ship').val('');
+
+    //Select type ship
+    $('#id_Type_ship').val('');
+
+    //count ship engine
+    $('#ship_engine_count').val('');
+    $('#edit_ship').val('');
+}
+
+function Edit_ship(name){
+    //alert("I'm work !!! "+name.id);
+    $.post("../php/Edit_ship_record.php", {id_ship: name.id}, function (str) {
+        $('#table_ships').html(str);
+    });
+}
 
     $.post("../php/View_ship.php", {}, function (str) {
         $('#table_ships').html(str);

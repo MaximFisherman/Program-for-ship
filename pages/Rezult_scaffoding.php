@@ -158,7 +158,7 @@ require_once "../Clasess/Class_ship.php";
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Падение эффективности корабля
+                        Падение эффективности корабля <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Effective_ship"><i class="glyphicon glyphicon-info-sign"></i></a>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -172,7 +172,7 @@ require_once "../Clasess/Class_ship.php";
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                       Диаграмма количества наростов по рейсам
+                       Диаграмма количества наростов по рейсам <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Narost_on_ship"><i class="glyphicon glyphicon-info-sign"></i></a>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -188,7 +188,7 @@ require_once "../Clasess/Class_ship.php";
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Диаграмма затрата топлива по рейсам
+                        Диаграмма затрата топлива по рейсам <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Coast_oil_ship"><i class="glyphicon glyphicon-info-sign"></i></a>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -203,7 +203,7 @@ require_once "../Clasess/Class_ship.php";
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Диаграмма пройденого пути по рейсам
+                        Диаграмма пройденого пути по рейсам <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Km_way_ship"><i class="glyphicon glyphicon-info-sign"></i></a>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -217,7 +217,7 @@ require_once "../Clasess/Class_ship.php";
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Диаграмма коррозийности по рейсам
+                        Диаграмма коррозийности по рейсам <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Down_effective"><i class="glyphicon glyphicon-info-sign"></i></a>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -227,8 +227,7 @@ require_once "../Clasess/Class_ship.php";
                 </div>
                 <!-- /.panel -->
             </div>
-            <script>
-
+<script>
 </script>
 
 <script>
@@ -285,7 +284,7 @@ require_once "../Clasess/Class_ship.php";
                     <fieldset>
                         <!-- Form Name -->
                         <p>
-                            1 узел  = 1,852 км/ч (1 морская миля в час) или 0,514 м/с
+                            На этих диаграммах показаны все эффекты которые будут оказанны на корабль при прохождении заданых рейсов
                         </p>
                     </fieldset>
                 </form>
@@ -293,6 +292,127 @@ require_once "../Clasess/Class_ship.php";
         </div>
     </div>
 </div>
+
+            <!-- Modal window add new resource -->
+<div class="fade modal" id="Down_effective">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Справка по диаграмме "коррозия корабля"</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" action="../php/Add_new_resource.php" method="post" enctype="multipart/form-data" >
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <p>
+                                       Диаграмма которая показывает количество металла которое будет уничтожено за рейс на корабле, расчет ведется по стандартной формуле
+                                        v=Δm / S•t, где <br>
+
+                                        v — скорость коррозии, которую обычно выражают в таких единицах: г/(м2•ч) или мг/(см2•сут);<br>
+
+                                        Δm — убыль (увеличение) массы;<br>
+
+                                        S — площадь поверхности;<br>
+
+                                        t — время.<br>
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+
+            <!-- Modal window add new resource -->
+            <div class="fade modal" id="Km_way_ship">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Справка по диаграмме "пройденого пути по рейсам"</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" action="../php/Add_new_resource.php" method="post" enctype="multipart/form-data" >
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <p>
+                                        Диаграмма которая показывает количество пройденого пути в км. расспределенного по рейсам.
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal window add new resource -->
+            <div class="fade modal" id="Coast_oil_ship">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Справка по диаграмме "Затраченое топливо"</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" action="../php/Add_new_resource.php" method="post" enctype="multipart/form-data" >
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <p>
+                                        Диаграмма которая показывает количество затреченного топлива, расспределеного по рейсам.
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal window add new resource -->
+            <div class="fade modal" id="Narost_on_ship">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Справка по диаграмме "Количество наростов на корпусе"</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" action="../php/Add_new_resource.php" method="post" enctype="multipart/form-data" >
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <p>
+                                        Данная диаграмма показывает количество наростов на корпусе корабля.
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal window add new resource -->
+            <div class="fade modal" id="Effective_ship">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Справка по диаграмме "Падение скорости"</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" action="../php/Add_new_resource.php" method="post" enctype="multipart/form-data" >
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <p>
+                                        Данная диаграмма показывает на сколько падает скорость корабля.<br>
+                                        1 узел  = 1,852 км/ч (1 морская миля в час) или 0,514 м/с
+                                    </p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </body>
 </html>
 

@@ -2,6 +2,8 @@
 require_once("Class_base.php");
 class Ship extends Base
 {
+    public $count_engine;
+
     //Добавление корабля
     function Add_ship($name_ship,$type_ship,$build_year_ship,$height,$length,$width,$snar_cargo,$max_cargo,$max_draft,$flag,$name_file_photo,$etalon_speed,$str_engine){
         mysqli_query($this->dlink, "INSERT INTO `Ships`(`name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`,photo_ship, speed) VALUES ('".$name_ship."','".$type_ship."','".$build_year_ship."','".$height."','".$length."','".$width."','".$snar_cargo."','".$max_cargo."','".$max_draft."','".$flag."','".$name_file_photo."','".$etalon_speed."')");
@@ -10,6 +12,18 @@ class Ship extends Base
 
         for($i=0;$i<count($str)-1;$i++) {
             mysqli_query($this->dlink, " INSERT INTO `Engine_ship`(`name`, `power`) VALUES ('" . $name_ship . "','" . $str[$i] . "')");
+        }
+        echo("<script>document.location.replace('../pages/Start_page.php');</script>");
+    }
+
+
+    function Update_ship($name_ship,$type_ship,$build_year_ship,$height,$length,$width,$snar_cargo,$max_cargo,$max_draft,$flag,$name_file_photo,$etalon_speed,$str_engine)
+    {
+            mysqli_query($this->dlink, "UPDATE `Ships` SET `name`='".$name_ship."',`type`='".$type_ship."',`build_year`='".$build_year_ship."',`height`='".$height."',`length`='".$length."',`width`='".$width."',`curb_weight`='".$snar_cargo."',`max_cargo`='".$max_cargo."',`max_draft`='".$max_draft."',`flag`='".$flag."',`photo_ship`='".$name_file_photo."',`speed`='".$etalon_speed."' where name like '%".$name_ship."%'");
+
+            $str =  explode("|",$str_engine);
+        for($i=0;$i<count($str)-1;$i++) {
+            mysqli_query($this->dlink, "UPDATE `Engine_ship` SET `power`='".$str[$i]."' WHERE name like '%".$name_ship."%';");
         }
         echo("<script>document.location.replace('../pages/Start_page.php');</script>");
     }
@@ -97,6 +111,67 @@ class Ship extends Base
         }
         }
 
+    function getCountEngine($name_ship){
+        $result = mysqli_query($this->dlink, "Select `name`,`power` from  Engine_ship where name like '".$name_ship."'");
+        $count = 0;
+        while($arr = mysqli_fetch_array($result)) {
+            $count ++;
+            $this->count_engine = $count;
+        }
+    }
+
+    function setPowerEngine($name_ship){
+        $result = mysqli_query($this->dlink, "Select `name`,`power` from  Engine_ship where name like '".$name_ship."'");
+        $count=0;
+        while($arr = mysqli_fetch_array($result)) {
+            $count++;
+            echo("<script>
+                $('#id_Engine_number_".$count."').val('".$arr['power']."');
+            </script>
+            ");
+        }
+    }
+
+    function Edit_record_ship($name_ship){
+        $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`,speed, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag`, photo_ship FROM `Ships` where name like '%".$name_ship."%'");
+        while($arr = mysqli_fetch_array($result)) {
+           $this->getCountEngine($name_ship);// get count engine ship
+
+
+            echo("<script>
+        $('#id_Name_ship').val('".$arr['name']."');
+        //Close input 
+        $('#id_Name_ship').prop('disabled', true);
+        
+        $('#id_Height_ship').val('".$arr['height']."');
+        $('#id_Width_ship').val('".$arr['width']."');
+        $('#id_Length_ship').val('".$arr['length']."');
+        $('#id_year_start_ship').val('".$arr['build_year']."');
+        $('#id_Lifting_capacity').val('".$arr['max_cargo']."');
+        $('#id_Curb_weight').val('".$arr['curb_weight']."');
+        $('#id_maximum_draft').val('".$arr['max_draft']."');
+        $('#id_Speed_ship').val('".$arr['speed']."');
+        $('#id_flag_ship').val('".$arr['flag']."');
+        
+        //Photo ship 
+        $('.del_div').remove();
+        
+        //Secret input 
+         $('#edit_ship').val('".$arr['name']."');
+         
+         //Select type ship  
+         $('#id_Type_ship').val('".$arr['type']."');
+         
+        //count ship engine 
+        $('#ship_engine_count').val('".$this->count_engine."');
+        $( \"#ship_engine_count\" ).trigger( \"change\" );
+        </script>
+        ");
+        }
+        $this->View_table_ship();//View table ships
+        $this->setPowerEngine($name_ship);//add to input record
+    }
+
 
     function View_table_ship(){
        $result =  mysqli_query($this->dlink, "SELECT  `name`, `type`, `build_year`, `height`, `length`, `width`, `curb_weight`, `max_cargo`, `max_draft`, `flag` FROM `Ships` ");
@@ -122,14 +197,15 @@ class Ship extends Base
                      <th>Ширина</th>
                      <th>Флаг</th>
                       
-                      <th>Открыть подробнее</th>
+                      <th>Открыть</th>
+                      <th>Изменить</th>
                       <th>Удалить</th>
                    </thead>
     <tbody>
     ");
     while($arr = mysqli_fetch_array($result)) {
     echo("<tr>");
-    echo("<td>".$arr['name']."</td>");
+        echo("<td>".$arr['name']."</td>");
         echo("<td>".$arr['type']."</td>");
         echo("<td>".$arr['build_year']."</td>");
         echo("<td>".$arr['height']."</td>");
@@ -137,6 +213,7 @@ class Ship extends Base
         echo("<td>".$arr['width']."</td>");
         echo("<td>".$arr['flag']."</td>");
      echo("<td><a class=\"btn btn-primary btn-xs\" href='index.php?name_ship=".$arr['name']."'>Открыть</a></td>
+    <td><a class=\"btn btn-warning btn-xs\" href='' onclick='Edit_ship(this)' id='".$arr['name']."'  data-toggle=\"modal\" data-target=\"#usuario\">Изменить</a></td>
     <td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><button onclick='Delete_ship(this);' id='".$arr['name']."' class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"#delete\" ><span class=\"glyphicon glyphicon-trash\"></span></a></p></td>
     ");
 

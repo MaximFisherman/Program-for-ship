@@ -283,16 +283,136 @@ new Morris.Line({
 
     }
 
-
+//Очистка карты от нарисованого
     function Clear_map_slice(){
         echo("
         <script>
                                     $('.clearClass').click(function() {
                                         var id_elem = $(this).attr('id');
+                                        kol1=\"1\";
                                         if(id_elem == '1_clear'){
-                                            alert('yea');ctx1.clearRect(0,0,10000,10000);
+                                             ctx1.clearRect(0,0,10000,10000);
+                                             ctx1.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic1       = new Image();              // \"Создаём\" изображение
+                                            pic1.src    = '../File/Slice_map/1.jpg';  // Источник изображения
+                                            pic1.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx1.drawImage(pic1, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol2=\"1\";
+                                        if(id_elem == '2_clear'){
+                                             ctx2.clearRect(0,0,10000,10000);
+                                             ctx2.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic2       = new Image();              // \"Создаём\" изображение
+                                            pic2.src    = '../File/Slice_map/2.jpg';  // Источник изображения
+                                            pic2.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx2.drawImage(pic2, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol3=\"1\";
+                                        if(id_elem == '3_clear'){
+                                             ctx3.clearRect(0,0,10000,10000);
+                                             ctx3.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic3       = new Image();              // \"Создаём\" изображение
+                                            pic3.src    = '../File/Slice_map/3.jpg';  // Источник изображения
+                                            pic3.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx3.drawImage(pic3, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol4=\"1\";
+                                        if(id_elem == '4_clear'){
+                                             ctx4.clearRect(0,0,10000,10000);
+                                             ctx4.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic4       = new Image();              // \"Создаём\" изображение
+                                            pic4.src    = '../File/Slice_map/4.jpg';  // Источник изображения
+                                            pic4.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx4.drawImage(pic4, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol5=\"1\";
+                                         if(id_elem == '5_clear'){
+                                             ctx5.clearRect(0,0,10000,10000);
+                                             ctx5.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic5       = new Image();              // \"Создаём\" изображение
+                                            pic5.src    = '../File/Slice_map/5.jpg';  // Источник изображения
+                                            pic5.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx5.drawImage(pic5, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol6=\"1\";
+                                        if(id_elem == '6_clear'){
+                                             ctx6.clearRect(0,0,10000,10000);
+                                             ctx6.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic6       = new Image();              // \"Создаём\" изображение
+                                            pic6.src    = '../File/Slice_map/6.jpg';  // Источник изображения
+                                            pic6.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx6.drawImage(pic6, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol7=\"1\";
+                                         if(id_elem == '7_clear'){
+                                             ctx7.clearRect(0,0,10000,10000);
+                                             ctx7.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic7       = new Image();              // \"Создаём\" изображение
+                                            pic7.src    = '../File/Slice_map/7.jpg';  // Источник изображения
+                                            pic7.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx7.drawImage(pic7, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol8=\"1\";
+                                         if(id_elem == '8_clear'){
+                                             ctx8.clearRect(0,0,10000,10000);
+                                             ctx8.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic8       = new Image();              // \"Создаём\" изображение
+                                            pic8.src    = '../File/Slice_map/8.jpg';  // Источник изображения
+                                            pic8.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx8.drawImage(pic8, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                       
+                                        kol9=\"1\";
+                                        if(id_elem == '9_clear'){
+                                             ctx9.clearRect(0,0,10000,10000);
+                                             ctx9.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic9       = new Image();              // \"Создаём\" изображение
+                                            pic9.src    = '../File/Slice_map/9.jpg';  // Источник изображения
+                                            pic9.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx9.drawImage(pic9, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol10=\"1\";
+                                        if(id_elem == '10_clear'){
+                                             ctx10.clearRect(0,0,10000,10000);
+                                             ctx10.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic10       = new Image();              // \"Создаём\" изображение
+                                            pic10.src    = '../File/Slice_map/10.jpg';  // Источник изображения
+                                            pic10.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx10.drawImage(pic10, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
+                                        }
+                                        kol11=\"1\";
+                                        if(id_elem == '11_clear'){
+                                             ctx11.clearRect(0,0,10000,10000);
+                                             ctx11.beginPath();//Удаление предыдущей серии линий 
+                                      
+                                            pic11       = new Image();              // \"Создаём\" изображение
+                                            pic11.src    = '../File/Slice_map/11.jpg';  // Источник изображения
+                                            pic11.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                                            ctx11.drawImage(pic11, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+                                        }
                                         }
                                     });
+                                    
                                 
         </script>
         ");

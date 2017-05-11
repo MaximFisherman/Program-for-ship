@@ -24,5 +24,9 @@ if (move_uploaded_file($_FILES['photo_new_ship']['tmp_name'] , $uploadfile)) {
     echo "";
 }
 
-$ship_class->Add_ship($_POST['Name_ship'],$_POST['Type_ship'],$_POST['Year_start_ship'],$_POST['Height_ship'],$_POST['Length_ship'],$_POST['Width_ship'],$_POST['Curb_weight'],$_POST["Lifting_capacity"],$_POST['maximum_draft'],$_POST['Flag_ship'],$name_file,$_POST['Speed_ship'],$str_engine);
+if($_POST['name_edit_ship']!=''){
+    $ship_class->Update_ship($_POST['name_edit_ship'], $_POST['Type_ship'], $_POST['Year_start_ship'], $_POST['Height_ship'], $_POST['Length_ship'], $_POST['Width_ship'], $_POST['Curb_weight'], $_POST["Lifting_capacity"], $_POST['maximum_draft'], $_POST['Flag_ship'], $name_file, $_POST['Speed_ship'], $str_engine);
+}else {
+    $ship_class->Add_ship($_POST['Name_ship'], $_POST['Type_ship'], $_POST['Year_start_ship'], $_POST['Height_ship'], $_POST['Length_ship'], $_POST['Width_ship'], $_POST['Curb_weight'], $_POST["Lifting_capacity"], $_POST['maximum_draft'], $_POST['Flag_ship'], $name_file, $_POST['Speed_ship'], $str_engine);
+}
 ?>
